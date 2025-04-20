@@ -2,11 +2,14 @@ from selenium import webdriver
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-import time
+import time, os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 SIMILAR_ACCOUNT = "buzzfeedtasty" # Change this to an account of your choice
-USERNAME = "stoimenov_d"
-PASSWORD = "Stoimenov1"
+USERNAME = os.getenv("INSTA_USERNAME")
+PASSWORD = os.getenv("INSTA_PASSWORD")
 
 
 class InstaFollower:
